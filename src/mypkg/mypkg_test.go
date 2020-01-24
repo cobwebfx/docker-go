@@ -13,7 +13,7 @@ func TestGetWord(t *testing.T) {
 		},
 		{
 			name: "case 2",
-			want: "word4",
+			want: "word",
 		},
 	}
 	for _, tt := range tests {
