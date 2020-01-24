@@ -1,5 +1,5 @@
 package mypkg
 
 func GetWord() string {
-	return "word3"
+	return "word"
 }

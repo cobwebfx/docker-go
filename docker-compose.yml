@@ -12,7 +12,4 @@ services:
   tests:
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - ./src:/go/src/app
-#    command: ["cd", "/go/src/",";", "go", "test", "./..."]
+      dockerfile: Dockerfile.test
