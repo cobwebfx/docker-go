@@ -16,4 +16,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o /go/
 
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /go/src /usr/share/nginx/html
