@@ -1,0 +1,18 @@
+version: '3'
+services:
+  goapp:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/go/src/app
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/go/src/app
+#    command: ["cd", "/go/src/",";", "go", "test", "./..."]
